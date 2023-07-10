@@ -1,6 +1,6 @@
 const express = require("express")
 require("dotenv").config()
-const port = process.env.PORT || 8080
+const port = process.env.PORT
 const { connection } = require("./Connections/db")
 const { restaurantRouter } = require("./Routes/restaurant.routes")
 const { userRouter } = require("./Routes/user.routes")
