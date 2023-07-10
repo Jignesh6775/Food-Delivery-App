@@ -1,8 +1,8 @@
 const mongoose = require("mongoose")
 
 const orderSchema = mongoose.Schema({
-    user : { type: ObjectId, ref: 'User' },
-    restaurant : { type: ObjectId, ref: 'Restaurant' },
+    user : { type: String, ref: 'User' },
+    restaurant : { type: String, ref: 'Restaurant' },
     item: [{
         name: { type: String },
         price: { type: Number },
