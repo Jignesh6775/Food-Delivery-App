@@ -6,7 +6,7 @@ const { UserModel } = require("../Models/user.model")
 require("dotenv").config()
 
 //Registration
-userRouter.post("register", async(req, res) =>{
+userRouter.post("/register", async(req, res) =>{
     const { name, email, password, address } = req.body
     try {
         //Check user
@@ -58,7 +58,7 @@ userRouter.post("/login", async(req, res) =>{
 })
 
 //Reset Password
-userRouter.patch("user/:id/reset", async (req, res) =>{
+userRouter.patch("/user/:id/reset", async (req, res) =>{
     try {
         const { id } = req.params
         const { currPass, newPass } = req.body
