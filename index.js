@@ -9,6 +9,10 @@ const app = express()
 
 app.use(express.json())
 
+app.get("/", (req, res)=>{
+    res.status(201).send("Use /api route for move forward")
+})
+
 app.use("/api", userRouter)
 app.use("/api", restaurantRouter)
 app.use("/api", OrderRouter)
